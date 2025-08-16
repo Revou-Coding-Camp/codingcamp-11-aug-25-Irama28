@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Acme Tech — Company Profile</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <!-- Header / Navbar -->
+  <header class="site-header">
+    <nav class="container nav">
+      <a href="#home" class="brand">Acme<span>Tech</span></a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#profile">Our Profile</a></li>
+        <li><a href="#contact">Message Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero / Photo Banner -->
+    <section id="home" class="hero" aria-label="Hero banner">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">Welcome to</p>
+          <h1>AcmeTech</h1>
+          <p class="lead">
+            <span id="greet">Hi, Guest</span> — we build delightful software that scales your business.
+          </p>
+
+          <div class="greet-input">
+            <label for="visitorName">Type your name:</label>
+            <input id="visitorName" name="visitorName" type="text" placeholder="e.g. user" />
+          </div>
+        </div>
+
+        <!-- “Photo” banner without external images (pure CSS) -->
+        <div class="hero-art" role="img" aria-label="Team working illustration"></div>
+      </div>
+    </section>
+
+    <!-- Our Profile -->
+    <section id="profile" class="section">
+      <div class="container grid-2">
+        <div>
+          <h2>About the Company</h2>
+          <p>
+            AcmeTech is a software engineering studio focused on web, mobile, and cloud solutions.
+            We partner with startups and enterprises to deliver reliable, secure, and user-centric products.
+          </p>
+          <ul class="facts">
+            <li>Founded: 2020</li>
+            <li>HQ: Bandung, Indonesia</li>
+            <li>Focus: Next.js · Node · Flutter · AI</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Vision</h3>
+          <p>To empower organizations with elegant, sustainable technology that people love to use.</p>
+          <h3>Mission</h3>
+          <ul class="list-check">
+            <li>Ship maintainable software, fast.</li>
+            <li>Champion accessibility & performance.</li>
+            <li>Invest in people, culture, and learning.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact / Message Us -->
+    <section id="contact" class="section alt">
+      <div class="container grid-2">
+        <div>
+          <h2>Message Us</h2>
+          <p>Have a question or project in mind? Send us a message—We’ll respond shortly.</p>
+
+          <form id="contactForm" novalidate>
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" placeholder="Your full name" required />
+              <small class="error" id="err-name"></small>
+            </div>
+
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="you@example.com" required />
+              <small class="error" id="err-email"></small>
+            </div>
+
+            <div class="field">
+              <label for="phone">Phone Number</label>
+              <input id="phone" name="phone" type="tel" placeholder="08xxxxxxxxxx" required />
+              <small class="error" id="err-phone"></small>
+            </div>
+
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4" placeholder="Tell us about your needs..." required></textarea>
+              <small class="error" id="err-message"></small>
+            </div>
+
+            <button type="submit" class="btn">Submit</button>
+            <p class="form-note">* All fields are required.</p>
+          </form>
+        </div>
+
+        <!-- Submission Preview (show values on the HTML) -->
+        <div>
+          <h3>Submission Preview</h3>
+          <div id="preview" class="card">
+            <p>No submission yet. Fill the form and hit submit—your data will show here.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> AcmeTech. All rights reserved.</p>
+      <a href="#home" class="to-top" aria-label="Back to top">↑</a>
+    </div>
+  </footer>
+
+  <script src="/js/script.js"></script>
+</body>
+</html>
